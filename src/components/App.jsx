@@ -4,19 +4,8 @@ import Input from "./Input";
 import { RiTodoFill } from "react-icons/ri";
 
 function App() {
-  const [todos, setTodos] = useState([
-    {
-      id: 0,
-      text: "this is thing to do",
-      isChecked: false,
-    },
-    {
-      id: 1,
-      text: "this is the second thing to do",
-      isChecked: false,
-    },
-  ]);
-
+  const [todos, setTodos] = useState([]);
+  // const [date, setDate] = useState(new Date());
   const clickHandle = (id) => {
     setTodos((prev) => {
       console.log(...prev);
@@ -27,7 +16,6 @@ function App() {
   };
 
   function submitHandler(inputValue) {
-    console.log("submitted!!", inputValue);
     setTodos((prev) => {
       return [
         ...prev,

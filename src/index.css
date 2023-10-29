@@ -6,13 +6,3 @@ body {
     background-image: url(./images/background-image.jpg);
     background-size: cover;
 }
-@keyframes subtle-ping {
-    0%, 100% {
-      transform: scale(1);
-      opacity: 1;
-    }
-    50% {
-      transform: scale(1.05);
-      opacity: 0.5;
-    }
-  }

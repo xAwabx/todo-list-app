@@ -31,7 +31,7 @@ export default function Todo({
             "text-gray-300 line-through transition-width duration-1000 ease-in"
           }`}
         >
-          {text}
+          {text.charAt(0).toUpperCase() + text.slice(1)}
         </p>
       </div>
       <p

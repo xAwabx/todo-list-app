@@ -4,6 +4,13 @@ import { useState } from "react";
 export default function ({ submitHandler }) {
   const [inputValue, setInputValue] = useState("");
 
+  function keyPressHandler(e) {
+    if (e.key === "Enter") {
+      submitHandler(inputValue);
+      setInputValue("");
+    }
+  }
+
   return (
     <div className="flex flex-row gap-4 ml-20 mr-20 p-3 text-lg bg-black text-white bg-opacity-80 rounded-md items-center mb-3">
       <p
@@ -12,7 +19,7 @@ export default function ({ submitHandler }) {
             submitHandler(inputValue);
             setInputValue("");
           } else {
-            console.log("fuck you");
+            alert("put something in");
           }
         }}
         className="text-3xl hover:cursor-pointer hover:text-gray-300 ease-in-out transition-colors"
@@ -21,9 +28,9 @@ export default function ({ submitHandler }) {
       </p>
 
       <input
+        onKeyPress={keyPressHandler}
         onChange={(e) => {
           const value = e.target.value;
-          console.log(value);
           setInputValue(value);
         }}
         type="text"
