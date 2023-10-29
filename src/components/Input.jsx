@@ -6,13 +6,17 @@ export default function ({ submitHandler }) {
 
   function keyPressHandler(e) {
     if (e.key === "Enter") {
-      submitHandler(inputValue);
-      setInputValue("");
+      if (inputValue !== "") {
+        submitHandler(inputValue);
+        setInputValue("");
+      } else {
+        alert("put something in");
+      }
     }
   }
 
   return (
-    <div className="flex flex-row gap-4 ml-20 mr-20 p-3 text-lg bg-black text-white bg-opacity-80 rounded-md items-center mb-3">
+    <div className="flex flex-row gap-4 ml-20 mr-20 p-3 text-lg bg-black text-white bg-opacity-80 rounded-md items-center mb-3 transition-transform hover:scale-[1.004] duration-700">
       <p
         onClick={() => {
           if (inputValue !== "") {
@@ -22,7 +26,7 @@ export default function ({ submitHandler }) {
             alert("put something in");
           }
         }}
-        className="text-3xl hover:cursor-pointer hover:text-gray-300 ease-in-out transition-colors"
+        className="text-3xl hover:cursor-pointer hover:text-gray-300 transform transition-transform hover:scale-110 duration-300"
       >
         <MdOutlineAddCircleOutline />
       </p>
