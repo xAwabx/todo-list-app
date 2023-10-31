@@ -16,7 +16,7 @@ export default function ({ submitHandler }) {
   }
 
   return (
-    <div className="flex flex-row gap-4 ml-20 mr-20 p-3 text-lg bg-black text-white bg-opacity-80 rounded-md items-center mb-3 transition-transform hover:scale-[1.004] duration-700">
+    <div className="flex flex-row min-w-[200px] gap-4 mx-10 lg:mx-20 md:mx-15 p-3 text-lg bg-black text-white bg-opacity-80 rounded-md items-center mb-3 transition-transform hover:scale-[1.004] duration-700">
       <p
         onClick={() => {
           if (inputValue !== "") {

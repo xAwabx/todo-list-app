@@ -9,7 +9,7 @@ export default function Todo({
   onClickDeleteHandler,
 }) {
   return (
-    <div className="flex flex-row justify-between mx-20 p-3 text-lg bg-black text-white bg-opacity-50 rounded-md mb-1 backdrop-blur-sm">
+    <div className=" min-w-[200px] flex flex-row justify-between mx-10 lg:mx-20 md:mx-15 p-3 text-lg bg-black text-white bg-opacity-50 rounded-md mb-1 backdrop-blur-sm">
       <div className="flex flex-row gap-4 items-center">
         <p
           className={`text-2xl hover:cursor-pointer hover:text-gray-300 transform transition-transform hover:scale-105 duration-300 ${
