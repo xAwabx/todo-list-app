@@ -10,7 +10,7 @@ export default function Todo({
 }) {
   return (
     <div className=" min-w-[200px] flex flex-row justify-between mx-10 lg:mx-20 md:mx-15 p-3 text-lg bg-black text-white bg-opacity-50 rounded-md mb-1 backdrop-blur-sm">
-      <div className="flex flex-row gap-4 items-center bg-red-500">
+      <div className="flex flex-row gap-4 items-center">
         <p
           className={`text-2xl hover:cursor-pointer hover:text-gray-300 transform transition-transform hover:scale-105 duration-300 ${
             isChecked === true && ""
@@ -26,7 +26,7 @@ export default function Todo({
           )}
         </p>
         <p
-          className={`hover:cursor-default font-mono tracking-tight ${
+          className={`whitespace-nowrap max-w-full overflow-ellipsis hover:cursor-default font-mono tracking-tight ${
             isChecked === true &&
             "text-gray-300 line-through transition-width duration-1000 ease-in"
           }`}
